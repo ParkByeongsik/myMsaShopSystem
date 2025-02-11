@@ -1,0 +1,5 @@
+rootProject.name = 'myMsaShopSystem'
+include 'testPay'
+include 'testRoot'
+include 'testCustomer'
+include 'defaultService'

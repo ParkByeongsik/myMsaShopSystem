@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: index
+  namespace: shop
+  labels:
+    service: index
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      service: index
+  template:
+    metadata:
+      labels:
+        service: index
+    spec:
+      containers:
+        - name: index
+          image: heaves/testroot:1.1
+          ports:
+            - containerPort: 9004
